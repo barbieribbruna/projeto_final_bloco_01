@@ -1,5 +1,4 @@
-import { AcessorioViagem } from "../model_repository/AcessorioViagem"
-
+import { AcessorioViagem } from "../model/AcessorioViagem"
 
 export function main (): void {
 

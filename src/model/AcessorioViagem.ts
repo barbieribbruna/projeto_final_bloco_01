@@ -1,12 +1,13 @@
 import { Produto } from "./Produto"
 
+
 export class AcessorioViagem extends Produto {
 
     // ATRIBUTOS ESPECÍFICOS DO PRODUTO
     
     private _portePet: string     // ex.: pequeno, médio, grande
     private _material: string     // ex.: nylon, poliéster, etc
-
+    
     // MÉTODO CONSTRUTOR
 
     constructor (
@@ -41,7 +42,7 @@ export class AcessorioViagem extends Produto {
         this._material = material
     }
 
-    // POLIMORFISMO (SOBRESCRITA DO MÉTODO VISUALIZAR())
+    // POLIMORFISMO (SOBRESCRITA DO MÉTODO VISUALIZAR() DA CLASSE MÃE)
 
     public override visualizar(): void {
         super.visualizar()

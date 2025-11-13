@@ -66,6 +66,8 @@ export abstract class Produto {
         this._estoque = estoque
     }
 
+    // MÉTODO COMUM - pode ser sobrescrito na Classe Filha
+
     public visualizar(): void {
         console.log(colors.fg.red,"\n*****************************************************")
         console.log("          🐾 PETTRIP - Menu Principal 🐾            ")
