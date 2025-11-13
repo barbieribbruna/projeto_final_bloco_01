@@ -1,11 +1,14 @@
 import readlinesync = require("readline-sync")
+import { colors } from "./src/util/Colors"
+
 
 export function main() {
 
     let opcao: number
 
     do { // o bloco é executado pelo menos uma vez
-        console.log("\n===========================================")
+        console.log(colors.fg.red,
+            "\n===========================================")
         console.log("       🐾 PETTRIP - Menu Principal 🐾     ")
         console.log("===========================================")
         console.log("           1 - Cadastrar produto           ")
@@ -13,14 +16,17 @@ export function main() {
         console.log("           3 - Comprar produto(s)          ")
         console.log("           4 - Sobre a loja PetTrip        ")
         console.log("           5 - Sair                        ")
-        console.log("===========================================")
+        console.log("===========================================",
+        colors.reset)
 
         console.log("\nDigite a opção desejada: ")
         opcao = readlinesync.questionInt("")
 
         if (opcao == 5) {
-            console.log("\nPetTrip - A aventura do seu pet começa aqui! 🐾")
+            console.log(colors.fg.greenstrong,
+                "\nPetTrip - A aventura do seu pet começa aqui! 🐾")
             sobre()
+            console.log(colors.reset, "")
             process.exit(0)
         }
 
